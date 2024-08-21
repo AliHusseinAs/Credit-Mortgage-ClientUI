@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREDIT BANK</title>
-    <script src="/clientSide/userUI.js"></script>
+    <script src="/clientSide/userUI.js" defer></script>
     <link rel="stylesheet" href="/clientSide/userUI.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
         <a href="#" class="btn3">Be An Investor</a>
         <a href="#" class="btn2">Open Account</a>
         <img src="/assets/city.jpg" alt="city1" class="cityImg">
-        <img src="/assets/redImg.jpg" alt="backImg" class="backImg">
+        <img src="/assets/img.jpg" alt="backImg" class="backImg">
     </header>
     <section class="rateCell">
         <p class="p3">
@@ -36,14 +36,32 @@
             <span class="line8">5.89%</span>
             <span class="line9">6.21%</span>
             <span class="line10">30 Years Mortgage</span>
+            <span class="line11">*Rates for US applications</span>
+            <span class="line12"><a href="#">see our global rates</a></span>
         </p>
         <a href="#" class="btn4">Apply Now</a>
     </section>
     <section class="calc">
-        <!-- ADD CALCULATOR -->
+        <p>
+            Calculate Your Mortgage 
+        </p>
+        <p class="resText" id="resText"></p>
+        <label for="amountField" class="amountL">Enter Amount</label>
+        <input type="number" required id="amountField" class="amount" placeholder="Amount" min="50000">
+        <label for="downField" class="downL">Down Payment</label>
+        <input type="number" required id="downField" class="down" placeholder="Down Payment" min="10000">
+        <label for="interest" class="annualL">Annual Interest Rate</label>
+        <input type="number" required id="interest" class="interest" placeholder="Annual Interest Rate" min="2.00">
+        <label for="period" class="periodL">Select period</label>
+        <select name="periods" id="period" class="slc">
+            <option value="selected" selected required>Select Period</option>
+            <option value="5">5 Years</option>
+            <option value="10">10 Years</option>
+            <option value="15">15 Years</option>
+            <option value="30">30 Years</option>
+        </select>
+        <a class="btnCalc" onclick="calculate()">Calculate</a>
+        <a href="#" class="hidden" id="applyAfterTextBTN">Apply Now</a>
     </section>
-    <!-- A Comment added to test VERSION CONTROL -->
-     <!-- TESTING -->
-    <!-- To test again for last to be sure -->
 </body>
 </html>
