@@ -1,0 +1,90 @@
+/* Reset default styling */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #dc3545; /* Red color for company branding */
+}
+
+.rates-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.rate-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.rate-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.rate-card p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.rate-card span {
+    font-weight: bold;
+    color: #333;
+}
+
+.rate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-apply {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-apply:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+}
+
+footer .company-name {
+    color: #dc3545; /* Red color for company branding */
+    font-weight: bold;
+}
