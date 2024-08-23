@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open an Account - Credit Mortgage</title>
+    <link rel="stylesheet" href="/clientSide/CSS files/register.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <span>Credit Mortgage</span> <span class="sub">Open Account</span>
+        </h1>
+    </header>
+
+    <main>
+        <section class="registration-form">
+            <h2>Open an Account</h2>
+            <p id="selectedCountry"></p>
+
+            <label for="national-id">National ID</label>
+            <input type="text" id="national-id" placeholder="Enter your National ID">
+
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter your First Name">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Enter your Last Name">
+
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="Enter your City">
+
+            <label for="neighborhood">Neighborhood</label>
+            <input type="text" id="neighborhood" placeholder="Enter your Neighborhood">
+
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" placeholder="Enter your Phone Number">
+
+            <label for="birthdate">Birthdate</label>
+            <input type="date" id="birthdate">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your Email">
+
+            <button id="submitButton">Submit</button>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const country = params.get('country');
+            document.getElementById('selectedCountry').innerText = `Country of Residence: ${country}`;
+        });
+    </script>
+</body>
+</html>

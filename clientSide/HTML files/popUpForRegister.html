@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Country</title>
+    <link rel="stylesheet" href="/clientSide/CSS files/popUp.css">
+</head>
+<body>
+    <div class="popup-container">
+        <h2>Select Your Country of Residence</h2>
+        <div class="country-options">
+            <label class="country-option">
+                <input type="radio" name="country" value="Turkey">
+                <img src="/assets/turkey-flag.svg" alt="Turkey Flag">
+                Turkey
+            </label>
+            <label class="country-option">
+                <input type="radio" name="country" value="Singapore">
+                <img src="/assets/singapore-flag.svg" alt="Singapore Flag">
+                Singapore
+            </label>
+            <label class="country-option">
+                <input type="radio" name="country" value="US">
+                <img src="/assets/us.svg" alt="US Flag">
+                United States
+            </label>
+        </div>
+        <button id="proceedButton">Proceed</button>
+    </div>
+
+    <script>
+        document.getElementById('proceedButton').addEventListener('click', function() {
+            const selectedCountry = document.querySelector('input[name="country"]:checked');
+            if (selectedCountry) {
+                window.location.href = `register.html?country=${selectedCountry.value}`;
+            } else {
+                alert('Please select a country.');
+            }
+        });
+    </script>
+</body>
+</html>
