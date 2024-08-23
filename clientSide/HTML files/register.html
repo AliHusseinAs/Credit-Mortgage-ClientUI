@@ -17,32 +17,33 @@
         <section class="registration-form">
             <h2>Open an Account</h2>
             <p id="selectedCountry"></p>
-
+            <form id="regForm">
             <label for="national-id">National ID</label>
-            <input type="text" id="national-id" placeholder="Enter your National ID">
+            <input type="text" id="national-id" placeholder="Enter your National ID" required maxlength="11">
 
             <label for="first-name">First Name</label>
-            <input type="text" id="first-name" placeholder="Enter your First Name">
+            <input type="text" id="first-name" placeholder="Enter your First Name" required>
 
             <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" placeholder="Enter your Last Name">
+            <input type="text" id="last-name" placeholder="Enter your Last Name" required>
 
             <label for="city">City</label>
-            <input type="text" id="city" placeholder="Enter your City">
+            <input type="text" id="city" placeholder="Enter your City" required>
 
             <label for="neighborhood">Neighborhood</label>
-            <input type="text" id="neighborhood" placeholder="Enter your Neighborhood">
+            <input type="text" id="neighborhood" placeholder="Enter your Neighborhood" required>
 
             <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" placeholder="Enter your Phone Number">
+            <input type="tel" id="phone-number" placeholder="Enter your Phone Number" required>
 
             <label for="birthdate">Birthdate</label>
-            <input type="date" id="birthdate">
+            <input type="date" id="birthdate" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your Email">
+            <input type="email" id="email" placeholder="Enter your Email" required>
 
-            <button id="submitButton">Submit</button>
+            <button id="submitButton" type="submit">Submit</button>
+            </form>
         </section>
     </main>
 

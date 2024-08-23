@@ -34,7 +34,8 @@
             const selectedCountry = document.querySelector('input[name="country"]:checked');
             if (selectedCountry) {
                 window.location.href = `register.html?country=${selectedCountry.value}`;
-            } else {
+            }
+            else {
                 alert('Please select a country.');
             }
         });
