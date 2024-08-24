@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open an Account - Credit Mortgage</title>
+    <link rel="stylesheet" href="/clientSide/CSS files/register.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <span>Credit Mortgage</span> <span class="sub">Open Account</span>
+        </h1>
+    </header>
+
+    <main>
+        <section class="registration-form">
+            <h2>Open an Account</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" required>
+    
+                <label for="national-id">National ID</label>
+                <input type="text" id="national-id" name="national-id" required>
+    
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+    
+                <label for="country">Country of Residence</label>
+                <input type="text" id="country" name="country" required>
+    
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+    
+                <label for="neighberhood">Neighborhood</label>
+                <input type="text" id="neighberhood" name="neighberhood" required>
+    
+                <label for="total-assets">Total Assets (Cash and Non-Cash)</label>
+                <input type="number" id="total-assets" name="total-assets" required>
+    
+                <label for="total-cash">Total Cash in Account</label>
+                <input type="number" id="total-cash" name="total-cash" required>
+    
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+    
+                <label for="tax-number">Tax Number</label>
+                <input type="text" id="tax-number" name="tax-number" required>
+    
+                <button type="submit" class="btn-submit">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const country = params.get('country');
+            document.getElementById('selectedCountry').innerText = `Country of Residence: ${country}`;
+        });
+    </script>
+</body>
+</html>

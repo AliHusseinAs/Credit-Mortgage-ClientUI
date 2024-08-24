@@ -3,72 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CREDIT BANK</title>
-    <script src="/clientSide/JS files/userUI.js" defer></script>
+    <title>Credit Mortgage</title>
     <link rel="stylesheet" href="/clientSide/CSS files/user.css">
+    <script src="/clientSide/JS files/userUI.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1 class="logo">
-            CREDIT MORTGAGE
-        </h1>
-        <section class="cell">
-        </section>
-        <p class="p1">
-            <span class="line1">We make dreams</span>
-            <span class="line2">Come TRUE</span>
-        </p>
-        <p class="p2">
-            <span class="line3">Through our programs</span>
-            <span class="line4">we make home ownership</span>
-            <span class="line5">much easier</span>
-        </p>
-        <a href="/clientSide/HTML files/globalRates.html" class="btn1" target="_blank">Get Offer</a>
-        <a href="/clientSide/HTML files/investor.html" class="btn3" target="_blank">Be An Investor</a>
-        <a href="/clientSide/HTML files/popUpForRegister.html" class="btn2">Open Account</a>
-        <img src="/assets/city.jpg" alt="city1" class="cityImg">
-        <img src="/assets/img.jpg" alt="backImg" class="backImg">
-    </header>
-    <section class="rateCell">
-        <p class="p3">
-            <span class="line12"><a href="/clientSide/HTML files/globalRates.html" target="_blank">see our global rates</a></span>
-        </p>
-        <a href="#" class="btn4">Apply Now</a>
-    </section>
-    <section class="calc">
-        <p>
-            Calculate Your Mortgage 
-        </p>
-        <p class="resText" id="resText"></p>
-        <label for="amountField" class="amountL">Enter Amount</label>
-        <input type="number" required id="amountField" class="amount" placeholder="Amount" min="50000">
-        <label for="downField" class="downL">Down Payment</label>
-        <input type="number" required id="downField" class="down" placeholder="Down Payment" min="10000">
-        <label for="interest" class="annualL">Annual Interest Rate</label>
-        <input type="number" required id="interest" class="interest" placeholder="Annual Interest Rate" min="2.00">
-        <label for="period" class="periodL">Select period</label>
-        <select name="periods" id="period" class="slc">
-            <option value="selected" selected required>Select Period</option>
-            <option value="5">5 Years</option>
-            <option value="10">10 Years</option>
-            <option value="15">15 Years</option>
-            <option value="30">30 Years</option>
-        </select>
-        <a class="btnCalc" onclick="calculate()">Calculate</a>
-        <a href="#" class="hidden" id="applyAfterTextBTN">Apply Now</a>
-    </section>
-    <section class="image">
-        <div class="overlay">
-            <h2>Your Dream Home Awaits</h2>
-            <p>Discover affordable mortgage options tailored for you.</p>
-            <a href="/clientSide/HTML files/globalRates.html" class="cta-btn" target="_blank">Start Now</a>
+
+    <header class="top-bar">
+        <div class="contact-info">
+            <span>Address: 123 Mortgage St.</span>
+            <span>Phone: (123) 456-7890</span>
+            <span>Email: info@creditmortgage.com</span>
         </div>
-        <img src="/assets/houses.jpg" alt="houses">
+        <div class="auth-buttons">
+            <a href="#login-client" class="btn">Login Client</a>
+            <a href="#login-investor" class="btn">Login Investor</a>
+        </div>
+    </header>
+    
+
+    <nav class="nav-bar">
+         <a class="company-name" href="/clientSide/HTML files/userUI.html">Credit Mortgage</a>
+        <ul class="nav-links">
+            <li><a href="/clientSide/HTML files/userUI.html">Home</a></li>
+            <li><a href="/clientSide/HTML files/about.html" target="_blank">About</a></li>
+            <li><a href="/clientSide/HTML files/service.html" target="_blank">Services</a></li>
+            <li><a href="/clientSide/HTML files/contactUs.html" target="_blank">Contact Us</a></li>
+            <li><a href="/clientSide/HTML files/investor.html" target="_blank">Investor Products</a></li>
+            <li><a href="/clientSide/HTML files/globalRates.html" target="_blank">Our Rates</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="hero">
+        <img src="/assets/houses.jpg" alt="Hero Image" class="hero-image">
+        <div class="hero-overlay">
+            <h1>Credit Mortgage</h1>
+            <p>We make home ownership much easier</p>
+            <a href="/clientSide/HTML files/popUpForRegister.html" class="btn btn-hero">Open Account</a>
+            <a href="/clientSide/HTML files/investorRegister.html" class="btn btn-investor" target="_blank">Be an Investor</a>
+        </div>
     </section>
+    
+
+    <section class="calculator">
+        <h2>Mortgage Calculator</h2>
+        <form id="calculator-form">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" min="100000" placeholder="Enter amount" required>
+
+            <label for="down-payment">Down Payment:</label>
+            <input type="number" id="down-payment" name="down-payment" min="20000" placeholder="Enter down payment" required>
+
+            <label for="interest-rate">Annual Interest Rate (%):</label>
+            <input type="number" id="interest-rate" name="interest-rate" min="4" placeholder="Enter interest rate" required>
+
+            <label for="period">Select Period:</label>
+            <select id="period" name="period">
+                <option value="5">5 years</option>
+                <option value="10">10 years</option>
+                <option value="15">15 years</option>
+                <option value="20">20 years</option>
+            </select>
+
+            <button type="button" class="btn btn-calculate" onclick="calculate()">Calculate</button>
+        </form>
+        <div class="calculator-result">
+            <p id="resText"></p>
+        </div>
+    </section>
+
+
     <footer>
-        <p>&copy; 2024 <span class="company-name">Credit Mortgage</span></p>
+        <div class="footer-content">
+            <span>&copy; 2024</span>
+            <span>Credit Mortgage</span>
+        </div>
     </footer>
 </body>
 </html>
-
-

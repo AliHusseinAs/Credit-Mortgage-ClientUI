@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Credit Mortgage</title>
+    <link rel="stylesheet" href="/clientSide/CSS files/user.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="contact-info">
+            <span>Address: 123 Mortgage St.</span>
+            <span>Phone: (123) 456-7890</span>
+            <span>Email: info@creditmortgage.com</span>
+        </div>
+        <div class="auth-buttons">
+            <a href="#login-client" class="btn">Login Client</a>
+            <a href="#login-investor" class="btn">Login Investor</a>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <a class="company-name" href="/clientSide/HTML files/userUI.html">Credit Mortgage</a>
+        <ul class="nav-links">
+            <li><a href="/clientSide/HTML files/userUI.html">Home</a></li>
+            <li><a href="/clientSide/HTML files/about.html" target="_blank">About</a></li>
+            <li><a href="/clientSide/HTML files/service.html" target="_blank">Services</a></li>
+            <li><a href="/clientSide/HTML files/contactUs.html" target="_blank">Contact Us</a></li>
+            <li><a href="/clientSide/HTML files/investor.html" target="_blank">Investor Products</a></li>
+            <li><a href="/clientSide/HTML files/globalRates.html" target="_blank">Our Rates</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="/clientSide/HTML files/thankYou.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="topic">Topic:</label>
+            <select id="topic" name="topic" required>
+                <option value="">Select a topic</option>
+                <option value="opening-account">Opening Account</option>
+                <option value="investor-account">Investor Account</option>
+                <option value="investing">Investing in Credit Mortgage</option>
+                <option value="saving-accounts">Saving Accounts</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2024</span>
+            <span>Credit Mortgage</span>
+        </div>
+    </footer>
+</body>
+</html>
