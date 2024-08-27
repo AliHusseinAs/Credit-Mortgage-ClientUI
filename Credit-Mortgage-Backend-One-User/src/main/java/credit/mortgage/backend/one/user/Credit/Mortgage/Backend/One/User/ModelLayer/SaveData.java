@@ -7,32 +7,35 @@ import java.time.LocalDate;
 @Table(name = "clients")
 public class SaveData {
     @Id
-    @Column( name = "nationalId")
+    @Column(name = "nationalId")
     private Integer nationalId;
-    @Column( name = "name")
+    @Column(name = "name")
     private String name;
-    @Column( name = "last_name")
+    @Column(name = "password")
+    private String password;
+    @Column(name = "last_name")
     private String lastName;
-    @Column( name = "country_of_residence")
-    private String ResidenceCountry;
-    @Column( name = "city")
+    @Column(name = "country_of_residence")
+    private String residenceCountry;
+    @Column(name = "city")
     private String city;
-    @Column( name = "neighbourhood")
+    @Column(name = "neighbourhood")
     private String neighbourhood;
-    @Column( name = "phone_number")
+    @Column(name = "phone_number")
     private String phoneNumber;
-    @Column( name = "brith_date")
+    @Column(name = "brith_date")
     private LocalDate birthDate;
-    @Column( name = "email")
+    @Column(name = "email")
     private String email;
 
     public SaveData() {}
 
-    public SaveData(Integer nationalId, String name, String lastName, String residenceCountry, String city, String neighbourhood, String phoneNumber, LocalDate birthDate, String email) {
+    public SaveData(Integer nationalId, String name, String password, String lastName, String residenceCountry, String city, String neighbourhood, String phoneNumber, LocalDate birthDate, String email) {
         this.nationalId = nationalId;
         this.name = name;
+        this.password = password;
         this.lastName = lastName;
-        ResidenceCountry = residenceCountry;
+        this.residenceCountry = residenceCountry;
         this.city = city;
         this.neighbourhood = neighbourhood;
         this.phoneNumber = phoneNumber;
@@ -56,6 +59,14 @@ public class SaveData {
         this.name = name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getLastName() {
         return lastName;
     }
@@ -65,11 +76,11 @@ public class SaveData {
     }
 
     public String getResidenceCountry() {
-        return ResidenceCountry;
+        return residenceCountry;
     }
 
     public void setResidenceCountry(String residenceCountry) {
-        ResidenceCountry = residenceCountry;
+        this.residenceCountry = residenceCountry;
     }
 
     public String getCity() {

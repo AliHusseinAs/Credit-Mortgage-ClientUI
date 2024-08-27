@@ -17,6 +17,8 @@ public class UserTempData {
     private Integer nationalId;
     @Column( name = "name")
     private String name;
+    @Column( name = "password")
+    private String password;
     @Column( name = "last_name")
     private String lastName;
     @Column( name = "country_of_residence")
@@ -34,7 +36,7 @@ public class UserTempData {
 
     public UserTempData() {}
 
-    public UserTempData(Integer nationalId, String name, String lastName, String residenceCountry, String city, String neighbourhood, String phoneNumber, LocalDate birthDate, String email) {
+    public UserTempData(Integer nationalId, String name, String lastName, String residenceCountry, String city, String neighbourhood, String phoneNumber, LocalDate birthDate, String email, String password) {
         this.nationalId = nationalId;
         this.name = name;
         this.lastName = lastName;
@@ -44,6 +46,15 @@ public class UserTempData {
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
         this.email = email;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Integer getNationalId() {

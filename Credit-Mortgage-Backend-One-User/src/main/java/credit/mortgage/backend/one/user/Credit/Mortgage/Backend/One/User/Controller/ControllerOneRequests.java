@@ -2,6 +2,7 @@ package credit.mortgage.backend.one.user.Credit.Mortgage.Backend.One.User.Contro
 // data will be taken form the UI and saved in temp database and evaluated by the bank worker
 // it will allow to send all the data in the temp database to the banker for evaluation
 
+import ch.qos.logback.core.encoder.EchoEncoder;
 import credit.mortgage.backend.one.user.Credit.Mortgage.Backend.One.User.ModelLayer.UserTempData;
 import credit.mortgage.backend.one.user.Credit.Mortgage.Backend.One.User.ServiceLayer.ServiceOneReqInt;
 import org.springframework.http.HttpStatus;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @RestController
 public class ControllerOneRequests {
-    private ServiceOneReqInt serviceOneReqInt;
+    private final ServiceOneReqInt serviceOneReqInt;
 
     public ControllerOneRequests(ServiceOneReqInt serviceOneReqInt) {
         this.serviceOneReqInt = serviceOneReqInt;
@@ -28,8 +29,12 @@ public class ControllerOneRequests {
     @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping("/v1/backendOneTempDataSet/removeTempDataByNationalId/{nationalId}")
     public ResponseEntity<String> removeDataFromTemp(@PathVariable Integer nationalId){
-        serviceOneReqInt.removeDataFromTemp(nationalId);
-        return new ResponseEntity<>("Data removed from temp database", HttpStatus.OK);
+       try{
+           serviceOneReqInt.removeDataFromTemp(nationalId);
+           return new ResponseEntity<>("Data removed from temp database", HttpStatus.OK);
+       }catch (Exception e){
+           return new ResponseEntity<>("An error occurred: " + e.getMessage(), HttpStatus.NOT_FOUND);
+       }
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")

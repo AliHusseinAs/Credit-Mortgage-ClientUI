@@ -6,36 +6,34 @@ import jakarta.persistence.*;
 @Table( name = "contact_table")
 public class ContactForm {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column( name = "name")
+    @Column(name = "email")
+    private String emailId;
+    @Column(name = "name")
     private String name;
-    @Column( name = "surname")
+    @Column(name = "surname")
     private String surname;
-    @Column( name = "email")
-    private String email;
-    @Column( name = "topic")
+    @Column(name = "topic")
     private String topic;
-    @Column( name = "message")
+    @Column(name = "message")
     private String message;
 
-    public ContactForm(){}
+    public ContactForm() {
+    }
 
-    public ContactForm(Long id, String name, String surname, String email, String topic, String message) {
-        this.id = id;
+    public ContactForm(String emailId, String name, String surname, String topic, String message) {
+        this.emailId = emailId;
         this.name = name;
         this.surname = surname;
-        this.email = email;
         this.topic = topic;
         this.message = message;
     }
 
-    public Long getId() {
-        return id;
+    public String getEmailId() {
+        return emailId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
     }
 
     public String getName() {
@@ -52,14 +50,6 @@ public class ContactForm {
 
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getTopic() {
