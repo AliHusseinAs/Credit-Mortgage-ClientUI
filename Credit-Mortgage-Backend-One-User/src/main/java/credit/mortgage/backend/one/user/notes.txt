@@ -1,7 +1,0 @@
-here is the case for the flow of data between temp table and clients table
-
-the banker will get all the data inside the temp table in its dashboard
-the banker will decide whether to accept or deny account open application
-the banker will then write the national ID of the accepted client and
-click a button that will send this data to clients table and save it there
-and in the same time that data will be deleted from the temp database.
