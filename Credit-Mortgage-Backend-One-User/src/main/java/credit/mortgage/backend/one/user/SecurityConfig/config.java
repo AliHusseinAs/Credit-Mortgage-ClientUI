@@ -21,7 +21,7 @@ public class config {
                 "/v1/backEndOneMortgage/deleteDataFromBankDatabase/{nationalId}","v1/backEndOneMortgage/deleteContactMessageDetails/{emailId}").authenticated().
                 requestMatchers("/v1/backEndOneMortgage/saveContactMessageDetails",
                         "v1/backEndOneMortgage/sendContactMessageDetailsToBanker",
-                        "/v1/backendOneTempDataSet/addTempData").permitAll());
+                        "/v1/backendOneTempDataSet/addTempData","/v1/backEndOne/addNewBankersData").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
         http.csrf(AbstractHttpConfigurer::disable);

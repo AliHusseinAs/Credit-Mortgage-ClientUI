@@ -26,7 +26,7 @@ public class ControllerOneRequests {
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:5500")
-    @GetMapping("/v1/backendOneTempDataSet/removeTempDataByNationalId/{nationalId}")
+    @DeleteMapping("/v1/backendOneTempDataSet/removeTempDataByNationalId/{nationalId}")
     public ResponseEntity<String> removeDataFromTemp(@PathVariable Integer nationalId){
        try{
            serviceOneReqInt.removeDataFromTemp(nationalId);
