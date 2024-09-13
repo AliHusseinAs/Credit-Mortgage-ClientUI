@@ -5,8 +5,8 @@ import backend.two.investor.Model.InvestorRegDataTemp;
 
 import java.util.List;
 
-public interface serviceTempData {
-    void getAllData();
+public interface ServiceTempData {
+    void getAllData(InvestorRegDataTemp investorRegDataTemp);
     List<InvestorRegDataTemp> sendTempData();
     void removeDataFromTemp(Integer nationalId);
 }

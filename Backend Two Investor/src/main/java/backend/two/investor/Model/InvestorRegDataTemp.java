@@ -35,7 +35,8 @@ public class InvestorRegDataTemp {
     @Column(name = "email")
     private String email;
 
-    public InvestorRegDataTemp() {}
+    public InvestorRegDataTemp() {
+    }
 
     public InvestorRegDataTemp(Integer nationalId, String name, String surname, String password, String countryOfResidence, String city, String neighborhood, Integer totalAssets, Integer totalCashInAccount, LocalDate birthDate, String taxNumber, String phoneNumber, String email) {
         this.nationalId = nationalId;

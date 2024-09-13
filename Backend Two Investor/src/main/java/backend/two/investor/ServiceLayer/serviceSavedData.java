@@ -1,6 +1,6 @@
 package backend.two.investor.ServiceLayer;
 
-public interface serviceSavedData {
+public interface ServiceSavedData {
     void saveDataInBankDatabase(Integer nationalId);
     void deleteDataFromBankDatabase(Integer nationalId);
 }
