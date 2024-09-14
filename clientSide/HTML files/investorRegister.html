@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open an Account - Credit Mortgage</title>
     <link rel="stylesheet" href="/clientSide/CSS files/register.css">
+    <script defer src="/clientSide/JS files/openAccountInvestor.js"></script>
 </head>
 <body>
     <header>
@@ -16,57 +17,57 @@
     <main>
         <section class="registration-form">
             <h2>Open an Account</h2>
-            <form>
+            <form id="FormData">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" placeholder="name" required>
     
                 <label for="surname">Surname</label>
-                <input type="text" id="surname" name="surname" required>
+                <input type="text" id="surname" placeholder="surname" required>
     
                 <label for="national-id">National ID</label>
-                <input type="text" id="national-id" name="national-id" required>
+                <input type="number" id="national-id" placeholder="national-id" required>
     
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" placeholder="password" required>
     
                 <label for="country">Country of Residence</label>
-                <input type="text" id="country" name="country" required>
+                <input type="text" id="country" placeholder="country" required>
     
                 <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
+                <input type="text" id="city" placeholder="city" required>
     
                 <label for="neighberhood">Neighborhood</label>
-                <input type="text" id="neighberhood" name="neighberhood" required>
+                <input type="text" id="neighberhood" placeholder="neighberhood" required>
     
                 <label for="total-assets">Total Assets (Cash and Non-Cash)</label>
-                <input type="number" id="total-assets" name="total-assets" required>
+                <input type="number" id="total-assets" placeholder="total-assets" required>
     
                 <label for="total-cash">Total Cash in Account</label>
-                <input type="number" id="total-cash" name="total-cash" required>
+                <input type="number" id="total-cash" placeholder="total-cash" required>
     
                 <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
+                <input type="date" id="dob" placeholder="dob" required>
     
                 <label for="tax-number">Tax Number</label>
-                <input type="text" id="tax-number" name="tax-number" required>
+                <input type="number" id="tax-number" placeholder="tax-number" required>
 
-                <label for="tax-number">Phone Number</label>
-                <input type="text" id="phone-number" name="phone-number" required>
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" placeholder="phone-number" required>
 
-                <label for="tax-number">Email</label>
-                <input type="text" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email" required>
     
-                <button type="submit" class="btn-submit">Register</button>
+                <button type="submit" class="btn-submit" id="submitButton">Register</button>
             </form>
         </section>
     </main>
 
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
             const country = params.get('country');
             document.getElementById('selectedCountry').innerText = `Country of Residence: ${country}`;
         });
-    </script>
+    </script> -->
 </body>
 </html>
